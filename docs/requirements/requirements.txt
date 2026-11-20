@@ -1,0 +1,27 @@
+/* SYSTEM REQUIREMENTS V1 */
+
+# System Summary
+
+The Notifier Daemon is a CLI tool that sends notifications at specified moments by the user.
+This tool can be used as an event reminder.
+
+## System Requirements
+
+### Dependency Requirements
+- The system must use <forever npm package>
+- The system must use <node-notifier npm package>
+- The system must use <nodemailer npm package>
+
+### Functional Requirements
+- The system must run a background process that sends notifications at specified dates.
+- The system must have a program for starting, restarting and stopping the background process.
+- The system must have a CLI interface for creating, removing and customizing notifications.
+- The system must allow setting the date and time of dispatch of notifications.
+- The system must allow setting whether the notification repeats every year.
+- The system must allow setting a list of global email addresses to which the notifications are always sent.
+- The system must allow setting a list of email addresses for a notification to which the notification
+will be sent to.
+- The system must allow setting the name and body of a notification.
+
+- The system must be designed using UML diagrams.
+- The system must be designed using Object-Oriented design patterns.
