@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+"User" as user
+package NotifierTool {
+  (Start Daemon) as STARTD_UC
+  (Restart Daemon) as RESTARTD_UC
+  (Stop Daemon) as STOPD_UC
+  (Create Notification) as C_NOT
+  (Edit Notification) as E_NOT
+  (Delete Notification) as D_NOT
+  (See Notifications) as S_NOT
+  (Register Emails) as R_EMAILS
+}
+user --> STARTD_UC
+user --> RESTARTD_UC
+user --> STOPD_UC
+user --> C_NOT
+user --> E_NOT
+user --> D_NOT
+user --> S_NOT
+user --> R_EMAILS
+@enduml
