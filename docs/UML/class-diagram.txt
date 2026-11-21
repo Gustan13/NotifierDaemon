@@ -1,0 +1,33 @@
+@startuml
+class Program
+class ToolFactory
+class Reader
+class Writer
+class ArgumentParser
+
+'interface Tool
+
+package Tools {
+'	package FormTools {
+		class NotificationFormTool implements Tool
+		class NotificationCreator extends NotificationFormTool
+		class NotificationEditor extends NotificationFormTool
+'	}
+	
+	class DeleteTool implements Tool
+	class EmailRegisterTool implements Tool
+	
+'	package DaemonTools {
+		class DaemonManagerTool implements Tool
+		class DaemonStarter extends DaemonManagerTool
+		class DaemonStopper extends DaemonManagerTool
+'	}
+}
+
+Program <-- ToolFactory : calls
+Program <-- Reader : Read from JSON file
+Program <-- Writer : Write to JSON file
+Program <-- ArgumentParser : Parses CLI Args
+ToolFactory "1" o-- "Many" Tool : fabricates
+
+@enduml
